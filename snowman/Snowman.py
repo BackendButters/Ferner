@@ -53,10 +53,16 @@ if __name__ == "__main__":
     except KeyError:
         uploadTimeRange = None
 
+    try:
+        uploadFolder = config['UploadFolder']
+    except KeyError:
+        uploadFolder = "uploads"
+
     log.info("Using AWS access key: " + access_key)
     log.info("Using AWS secret key: <Top_Secret>")
     log.info("Using vault " + defaultVault + " @ region " + glacierRegion)
     log.info("Uploading files between: " + str(uploadTimeRange))
+    log.info("Watching folder " + uploadFolder + "/")
 
     glacierhnd = Glacierhandling(access_key, secret_key, defaultVault, glacierRegion, uploadTimeRange)
     
@@ -65,7 +71,7 @@ if __name__ == "__main__":
   
     hndlr = Fileeventhandler()
     observer = Observer()
-    observer.schedule(hndlr, '.', recursive=False)
+    observer.schedule(hndlr, './' + uploadFolder, recursive=False)
     observer.start()
     
     log.info("Watching the snowman melting...")
