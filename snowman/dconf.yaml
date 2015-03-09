@@ -1,0 +1,6 @@
+AWS_Secret_Key: Password1
+AWS_Access_Key: whatever
+AWS_Region: us-east-1
+Vault: Vault101
+
+# StartUploadBetween: 15:00-06:00
