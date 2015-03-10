@@ -30,7 +30,6 @@ class Glacierhandling(threading.Thread):
         return False
     
     def __init__(self, access_key, secret_key, vaultname, region, uploadtimerange):
-
         threading.Thread.__init__(self)
         self.glacier_layer2 = Layer2(aws_access_key_id=access_key, aws_secret_access_key=secret_key, region_name=region)
         self.glacier_layer1 = Layer1(aws_access_key_id=access_key, aws_secret_access_key=secret_key, region_name=region)

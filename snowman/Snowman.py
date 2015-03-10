@@ -15,7 +15,6 @@ import yaml
 
 log = Logger('Snowman observer')
 
-
 class Fileeventhandler(PatternMatchingEventHandler):
     ignore_patterns = ["*/.*"]
     
@@ -29,6 +28,7 @@ class Fileeventhandler(PatternMatchingEventHandler):
 
 
 if __name__ == "__main__":
+
     parser = optparse.OptionParser()
     parser.add_option("-c", "--configfile", dest="configfile",
                       type="string",
@@ -55,9 +55,19 @@ if __name__ == "__main__":
         uploadTimeRange = None
 
     try:
+        downloadTimeRange = config['StartDownloadBetween']
+    except KeyError:
+        downloadTimeRange = None
+
+    try:
         uploadFolder = config['UploadFolder']
     except KeyError:
         uploadFolder = "uploads"
+
+    try:
+        downloadFolder = config['DownloadFolder']
+    except KeyError:
+        downloadFolder = "downloads"
 
     log.info("Using AWS access key: " + access_key)
     log.info("Using AWS secret key: <Top_Secret>")

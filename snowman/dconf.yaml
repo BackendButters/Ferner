@@ -3,5 +3,8 @@ AWS_Access_Key: whatever
 AWS_Region: us-east-1
 Vault: Vault101
 
-# StartUploadBetween: 15:00-06:00
+# StartUploadBetween: 23:00-05:00
+# StartDownloadBetween: 23:00-05:00
 # UploadFolder: uploads
+# DownloadFolder: downloads
+# DB: Ferner.db

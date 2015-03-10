@@ -5,7 +5,7 @@ A Simple AWS Glacier upload slave.
 Project Ferner is meant to be a user-friendly [AWS Glacier](http://aws.amazon.com/de/glacier/) client. Right now, Ferner consists of the *Snowman*-Module, which is currently able to upload files to Glacier.
 
 ## Prerequisites
-Python 3.4 with modules: watchdog, logbook, boto
+Python 3.4 with modules: watchdog, logbook, boto, peewee
 
 ## Configuration
 Use the provided configuration file *dconf.yaml* and adapt it to your settings. Enter your AWS credentials and region and vault to use. Also, make sure your AWS user is equipped with the correct Glacier permissions. If you wish, you can also specify the time range in which uploads will be started.
