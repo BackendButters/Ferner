@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 #
 # 2015 BackendButters
 # MIT license

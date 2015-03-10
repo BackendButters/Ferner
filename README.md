@@ -11,7 +11,7 @@ Python 3.4 with modules: watchdog, logbook, boto
 Use the provided configuration file *dconf.yaml* and adapt it to your settings. Enter your AWS credentials and region and vault to use. Also, make sure your AWS user is equipped with the correct Glacier permissions. If you wish, you can also specify the time range in which uploads will be started.
 
 ## Usage
-`python3 ./Snowman.py -c *yourconfig*.yaml`
+`Snowman.py -c *yourconfig*.yaml`
 
 After starting the program, all newly created files in the working directory will be automatically uploaded to the vault provided in the config file.
 
