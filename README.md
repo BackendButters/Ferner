@@ -1,8 +1,9 @@
 *** Update 12 Mar 2015 ***
+
 I wrote a [blog post](http://blog.butterworks.de/i-had-a-side-project.html) about development on this project.
 
 # Ferner
-A Simple AWS Glacier upload slave.
+A simple AWS Glacier upload slave.
 
 ## What's that?
 Project Ferner is meant to be a user-friendly [AWS Glacier](http://aws.amazon.com/de/glacier/) client. Right now, Ferner consists of the *Snowman*-Module, which is currently able to upload files to Glacier.
